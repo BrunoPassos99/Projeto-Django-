@@ -1,0 +1,62 @@
+body {
+    background: linear-gradient(to bottom right, #f0f4ff, #e2f7ff);
+    height: 100vh;
+    color: #333;
+    margin: 0;
+    transition: margin-left 0.3s ease; /* Suaviza a transição do conteúdo principal */
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    width: 100px; /* Tamanho inicial da sidebar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #343a40;
+    padding-top: 20px;
+    transition: width 0.3s ease; /* Transição suave quando expandir e recolher */
+    z-index: 1000;
+}
+
+.sidebar:hover {
+    width: 250px; /* Largura ao passar o mouse */
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: padding 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+.navbar {
+    background-color: #007bff;
+    color: white;
+}
+
+.navbar a {
+    color: white;
+}
+
+.main-content {
+    margin-left: 70px; /* Espaço para a sidebar fechada */
+    padding: 20px;
+    transition: margin-left 0.3s ease; /* Suaviza a transição do conteúdo principal */
+}
+
+.sidebar:hover ~ .main-content {
+    margin-left: 250px; /* Aumenta o espaço do conteúdo quando a sidebar é expandida */
+}
+.sidebar-logo {
+    width: 100%;  /* Ajuste conforme necessário */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}

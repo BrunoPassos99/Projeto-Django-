@@ -1,0 +1,67 @@
+body {
+    background: linear-gradient(to bottom right, #f0f4ff, #e2f7ff); /* Fundo mais leve: tons de azul claro */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333; /* Cor do texto ajustada para maior contraste */
+    margin: 0;
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.85); /* Fundo branco com 85% de opacidade */
+    border-radius: 20px; /* Bordas mais arredondadas */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Sombra mais sutil */
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 450px;
+    backdrop-filter: blur(10px); /* Reduzi o desfoque para combinar com o novo fundo */
+    -webkit-backdrop-filter: blur(10px); /* Compatibilidade com navegadores Webkit */
+    border: 1px solid rgba(200, 200, 200, 0.4); /* Contorno mais discreto */
+    /* Estilo para o efeito de transição */
+    opacity: 0; /* Começa invisível */
+    transform: translateY(50px); /* Começa deslocado para baixo */
+    transition: opacity 3s ease, transform 3s ease; /* Transição suave de 3 segundos */
+}
+
+body.loaded .login-card {
+    opacity: 1; /* Totalmente visível */
+    transform: translateY(0); /* Volta à posição original */
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #6ab7ff, #4a90e2); /* Tons suaves de azul */
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #fff; /* Texto branco para contraste */
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right, #4a90e2, #6ab7ff); /* Inversão no hover */
+}
+
+.input-group-text {
+    background-color: #f1f3f8; /* Fundo mais claro para harmonizar com o fundo geral */
+    border: none;
+}
+
+.form-control {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-control:focus {
+    border-color: #4a90e2; /* Azul suave */
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); /* Cor azul clara */
+}
+
+.text-muted a {
+    color: #77848f;
+    text-decoration: none;
+}
+
+.text-muted a:hover {
+    color: #4693eb;
+}
